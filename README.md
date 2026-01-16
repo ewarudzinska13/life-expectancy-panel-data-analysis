@@ -43,9 +43,9 @@ This study examines the relationship between life expectancy at birth and key he
 
 ### Model Selection Tests
 
-- **Breusch-Pagan test** (POLS vs RE): χ² = 16,899.24, p < 0.001 → RE preferred
-- **F-test** (POLS vs FE): F = 174.67, p < 0.001 → FE preferred
-- **Hausman test** (RE vs FE): χ² = 322.22, p < 0.001 → **FE model selected**
+- **Breusch-Pagan test** (POLS vs RE): χ² = 16,899.24, p < 0.001 -> RE preferred
+- **F-test** (POLS vs FE): F = 174.67, p < 0.001 -> FE preferred
+- **Hausman test** (RE vs FE): χ² = 322.22, p < 0.001 -> **FE model selected**
 
 ### Diagnostic Tests
 
@@ -67,12 +67,12 @@ xtreg life_expect adult_mortality infant_mort bmi gghed che_gdp une_gni, ///
 
 | Variable | Coefficient | Robust SE | t-stat | p-value | Interpretation |
 |----------|-------------|-----------|---------|---------|----------------|
-| `adult_mortality` | -0.043*** | 0.002 | -131.94 | 0.000 | Higher adult mortality → lower life expectancy |
-| `infant_mort` | -0.098*** | 0.006 | -67.81 | 0.000 | Higher infant mortality → lower life expectancy |
-| `bmi` | -0.340** | 0.104 | -11.44 | 0.000 | Higher BMI → lower life expectancy |
-| `gghed` | 0.129** | 0.041 | 6.85 | 0.000 | Higher gov't health spending → higher life expectancy |
+| `adult_mortality` | -0.043*** | 0.002 | -131.94 | 0.000 | Higher adult mortality -> lower life expectancy |
+| `infant_mort` | -0.098*** | 0.006 | -67.81 | 0.000 | Higher infant mortality -> lower life expectancy |
+| `bmi` | -0.340** | 0.104 | -11.44 | 0.000 | Higher BMI -> lower life expectancy |
+| `gghed` | 0.129** | 0.041 | 6.85 | 0.000 | Higher gov't health spending -> higher life expectancy |
 | `che_gdp` | -0.004 | 0.027 | -0.32 | 0.746 | Not significant |
-| `une_gni` | 0.000*** | 0.000 | 22.95 | 0.000 | Higher income → higher life expectancy |
+| `une_gni` | 0.000*** | 0.000 | 22.95 | 0.000 | Higher income -> higher life expectancy |
 | Constant | 71.002*** | 2.778 | 93.90 | 0.000 | |
 
 **Model fit**: Within R² = 0.9716, F(6, 2654) = 1,068.06
@@ -81,16 +81,16 @@ xtreg life_expect adult_mortality infant_mort bmi gghed che_gdp une_gni, ///
 
 ## Key Findings
 
-### Hypothesis 1: Mortality Indicators (Confirmed ✓)
+### Hypothesis 1: Mortality Indicators (Confirmed)
 - **Adult mortality**: Each additional death per 1,000 adults (15-60) reduces life expectancy by **0.043 years**
 - **Infant mortality**: Each additional infant death per 1,000 births reduces life expectancy by **0.098 years**
 - Both strongly significant (p < 0.001)
 
 ### Hypothesis 2: Economic & Health Expenditures (Partially Confirmed)
 - **GNI per capita**: Positive and significant (β ≈ 0.00005, p < 0.001)
-  - $10,000 increase in GNI → ~0.5 year increase in life expectancy
+  - $10,000 increase in GNI -> ~0.5 year increase in life expectancy
 - **Government health spending**: Positive and significant (β = 0.129, p < 0.001)
-  - 1% increase in gov't health spending share → 0.13 year increase
+  - 1% increase in gov't health spending share -> 0.13 year increase
 - **Total health expenditure (% GDP)**: Not significant (p = 0.746)
 
 ### BMI Effect (Unexpected)
@@ -127,7 +127,7 @@ xtreg life_expect adult_mortality infant_mort bmi gghed che_gdp une_gni, ///
 
 - Time-varying omitted variables (e.g., healthcare quality)
 - Measurement error in BMI (country averages)
-- Potential reverse causality (income ↔ health)
+- Potential reverse causality (income / health)
 - Missing data for some countries/years
 
 ---
